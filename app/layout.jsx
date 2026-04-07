@@ -26,9 +26,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning={true}>
         <DashboardProvider>
-          <SmoothScroll>
-            {children}
-          </SmoothScroll>
+          {children}
         </DashboardProvider>
       </body>
     </html>
