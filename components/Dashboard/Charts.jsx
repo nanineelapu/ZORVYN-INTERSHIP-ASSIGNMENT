@@ -34,7 +34,7 @@ export default function Charts() {
           <p className="text-[10px] text-slate-400">Total growth history</p>
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 min-h-[250px]">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={monthlyData}>
               <XAxis dataKey="month" hide />
@@ -53,7 +53,7 @@ export default function Charts() {
           <p className="text-[10px] text-slate-400">Categorical breakdown</p>
         </div>
 
-        <div className="flex-1 flex flex-col sm:flex-row items-center gap-6 pb-2">
+        <div className="flex-1 flex flex-col sm:flex-row items-center gap-6 pb-2 min-h-[250px]">
           <div className="flex-1 h-48 sm:h-full w-full">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>

@@ -29,10 +29,13 @@ export function DashboardProvider({ children }) {
     setTransactions(prev => [newRecord, ...prev]);
   };
 
+  const removeTx = (id) => {
+    setTransactions(prev => prev.filter(t => t.id !== id));
+  };
+
   // Logout mockup
   const logout = () => {
-    localStorage.removeItem("zorvyn_role");
-    localStorage.removeItem("zorvyn_tx");
+    localStorage.clear();
     setRole("Viewer");
     setTransactions(initialData);
     window.location.reload();
@@ -43,7 +46,7 @@ export function DashboardProvider({ children }) {
       value={{
         role, setRole,
         transactions, setTransactions,
-        addTx,
+        addTx, removeTx,
         search, setSearch,
         filter, setFilter,
         logout,
